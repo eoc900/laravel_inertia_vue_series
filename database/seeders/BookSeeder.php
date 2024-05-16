@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Database\Factories\BookFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,7 @@ class BookSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+            $fact = new BookFactory();
+            $fact->count(100)->create();
     }
 }
